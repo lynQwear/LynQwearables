@@ -30,18 +30,19 @@
       font-size: 18px;
       font-family: 'Poppins', sans-serif;
       cursor: pointer;
-      border: none;
+      border: 2px solid white;    /* weißer Rahmen */
       border-radius: 5px;
-      background-color: #1abc9c;
-      color: white;
-      transition: background-color 0.2s;
+      background-color: black;    /* schwarzer Hintergrund */
+      color: white;               /* weißer Text */
+      transition: all 0.2s;
     }
     button:hover {
-      background-color: #16a085;
+      background-color: #222;     /* leicht helleres Schwarz beim Hover */
     }
     #message {
       font-size: 24px;
       margin-bottom: 20px;
+      color: white;               /* Text in Weiß */
     }
   </style>
 </head>
@@ -62,12 +63,7 @@
         yes: {image: 'Flat Earth Pickupline.png', text: 'Congrats! Your humor is flatter than Earth!'},
         no: {image: 'You liar Pcikupline.png', text: "Don't lie, I see you smirking"}
       },
-      // Hier kannst du weitere Pickuplines hinzufügen:
-      // {
-      //   start: {image: 'Shirt2.png', text: 'New Question?'},
-      //   yes: {image: 'Shirt2Yes.png', text: 'Congrats!'},
-      //   no: {image: 'Shirt2No.png', text: 'Oops!'}
-      // },
+      // Weitere Pickuplines können hier ergänzt werden
     ];
 
     let currentIndex = 0;
