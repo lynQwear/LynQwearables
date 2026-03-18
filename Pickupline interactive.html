@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>lynQwear Dynamic Pickuplines</title>
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+    img {
+      max-width: 80%;
+      max-height: 50%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #1abc9c;
+      color: white;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #16a085;
+    }
+    #message {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="mainImage" src="" alt="Shirt Design">
+  <div id="message"></div>
+  <div id="buttons">
+    <button id="yesBtn">Yes</button>
+    <button id="noBtn">No</button>
+  </div>
+
+  <script>
+    // Array mit allen Pickuplines / Shirts
+    const pickuplines = [
+      {
+        start: {image: 'Pickupline.png', text: 'Caught you smiling?'},
+        yes: {image: 'Flat Earth Pickupline.png', text: 'Congrats! Your humor is flatter than Earth!'},
+        no: {image: 'You liar Pickupline.png', text: "Don't lie, I see you smirking"}
+      },
+      // Hier kannst du weitere Pickuplines hinzufügen:
+      // {
+      //   start: {image: 'Shirt2.png', text: 'New Question?'},
+      //   yes: {image: 'Shirt2Yes.png', text: 'Congrats!'},
+      //   no: {image: 'Shirt2No.png', text: 'Oops!'}
+      // },
+    ];
+
+    let currentIndex = 0;
+
+    const mainImage = document.getElementById('mainImage');
+    const message = document.getElementById('message');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    function loadPickupline(index) {
+      const current = pickuplines[index];
+      mainImage.src = current.start.image;
+      message.textContent = current.start.text;
+      document.getElementById('buttons').style.display = 'flex';
+    }
+
+    function handleYes() {
+      const current = pickuplines[currentIndex];
+      mainImage.src = current.yes.image;
+      message.textContent = current.yes.text;
+      document.getElementById('buttons').style.display = 'none';
+    }
+
+    function handleNo() {
+      const current = pickuplines[currentIndex];
+      mainImage.src = current.no.image;
+      message.textContent = current.no.text;
+      document.getElementById('buttons').style.display = 'none';
+    }
+
+    yesBtn.addEventListener('click', handleYes);
+    noBtn.addEventListener('click', handleNo);
+
+    // Lade die erste Pickupline
+    loadPickupline(currentIndex);
+  </script>
+
+</body>
+</html>
