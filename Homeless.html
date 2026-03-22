@@ -7,48 +7,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; background: #000; color: #fff; }
+    html, body { height: 100%; margin: 0; background: #000; color: #fff; overflow: hidden; }
     .page {
-      height: 100vh;                /* alles in einer Viewport-Höhe */
+      height: 100vh;
       display: flex;
       flex-direction: column;
     }
     .hero {
-      flex: 1 1 auto;               /* nimmt den restlichen Platz über der Caption */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-      overflow: hidden;
-    }
-    .hero img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;          /* ganzes Bild sichtbar, kein Beschnitt */
-      display: block;
+      flex: 1 1 auto;                 /* nimmt fast alles */
+      background: url("Homeless.jpeg") center center / cover no-repeat;
     }
     .caption {
-      flex: 0 0 auto;
+      height: 64px;                   /* schmale Zeile unten */
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: clamp(20px, 4vw, 48px);
-      line-height: 1.1;
+      font-size: clamp(18px, 3.5vw, 40px);
+      line-height: 1;
       background: #000;
-      padding: 12px 16px 18px;      /* sitzt direkt unter dem Bild */
+      padding: 0 12px;
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="hero">
-      <img src="Homeless.jpeg" alt="Spark Change">
-    </div>
+    <div class="hero"></div>
     <div class="caption">Not being homeless 🥲</div>
   </div>
 </body>
