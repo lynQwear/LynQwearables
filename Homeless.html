@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>lynQwear</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html, body { height: 100%; margin: 0; background: #000; color: #fff; }
-    .page {
-      min-height: 100vh;
+    body {
+      margin: 0;
+      background: black;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 24px;
     }
-    .hero {
-      flex: 1 1 auto;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;   /* füllt den verfügbaren Bereich komplett */
-      object-position: center;
-      display: block;
+    img {
+      max-width: 90vw;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 12px;
     }
     .caption {
-      flex: 0 0 auto;
-      padding: 18px 16px 28px;
-      text-align: center;
-      font-family: 'Poppins', sans-serif;
+      margin-top: 20px;
+      font-size: clamp(24px, 5vw, 56px);
       font-weight: 700;
-      font-size: clamp(22px, 4.5vw, 56px);
-      line-height: 1.1;
-      background: #000; /* eigener Bereich unter dem Bild */
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <div class="hero">
-      <img src="Homeless.jpeg" alt="Spark Change">
-    </div>
-    <div class="caption">Not being homeless 🥲</div>
-  </div>
+  <img src="Homeless.jpeg" alt="Spark Change">
+  <div class="caption">Not being homeless 🥲</div>
 </body>
 </html>
