@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lynQwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;background:#000;font-family:'Poppins',sans-serif;overflow:hidden}
+    .wrapper{
+      height:100svh; /* sichere Viewport-Höhe auf Handys */
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+    }
+    .hero{
+      width:100vw;
+      height:calc(100svh - 3rem); /* lässt ~3rem Platz für die Caption */
+      object-fit:cover; /* füllt den Screen, leichter Beschnitt möglich */
+      object-position:center;
+    }
+    .caption{
+      margin-top:.5rem;
+      color:#fff;
+      font-size:clamp(1rem,3vw,1.5rem);
+      text-align:center;
+      line-height:1.2;
+      white-space:nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="Titanic.jpeg" alt="SPARK CHANGE" class="hero">
+    <div class="caption">just wanted to break the ice🥶</div>
+  </div>
+</body>
+</html>
