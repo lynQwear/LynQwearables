@@ -1,58 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lynQwear Dynamic Pickuplines</title>
-  <!-- Poppins Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      background: black;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;background:#000;font-family:'Poppins',sans-serif;overflow:hidden;color:#fff;text-align:center}
+   .wrapper{
+      height:100svh;
+      display:flex; flex-direction:column; align-items:center; justify-content:flex-start;
     }
-    img {
-      max-width: 80%;
-      max-height: 50%;
-      margin-bottom: 20px;
-      border-radius: 10px;
+   .hero{
+      width:100vw;
+      /* mehr Platz für interaktive Caption (~8rem) */
+      height:calc(100svh - 8rem);
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      border-radius:10px;
     }
-    button {
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 18px;
-      font-family: 'Poppins', sans-serif;
-      cursor: pointer;
-      border: 2px solid white;    /* weißer Rahmen */
-      border-radius: 5px;
-      background-color: black;    /* schwarzer Hintergrund */
-      color: white;               /* weißer Text */
-      transition: all 0.2s;
+    #message{
+      margin-top:.75rem;
+      font-size:clamp(1.1rem,3.5vw,1.6rem);
+      line-height:1.2;
+      padding:0 1rem;
     }
-    button:hover {
-      background-color: #222;     /* leicht helleres Schwarz beim Hover */
+    #buttons{
+      display:flex; gap:.5rem; margin-top:.75rem; margin-bottom:1rem;
     }
-    #message {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: white;               /* Text in Weiß */
+    button{
+      padding:10px 20px;
+      font-size:18px;
+      font-family:'Poppins',sans-serif;
+      cursor:pointer;
+      border:2px solid #fff;
+      border-radius:5px;
+      background:#000;
+      color:#fff;
+      transition:all.2s;
     }
+    button:hover{ background:#222; }
   </style>
 </head>
 <body>
 
-  <img id="mainImage" src="" alt="Shirt Design">
-  <div id="message"></div>
-  <div id="buttons">
-    <button id="yesBtn">Yes</button>
-    <button id="noBtn">No</button>
+  <div class="wrapper">
+    <img id="mainImage" class="hero" src="" alt="Shirt Design">
+    <div id="message"></div>
+    <div id="buttons">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
   </div>
 
   <script>
