@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lynQwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;background:#000;font-family:'Poppins',sans-serif;overflow:hidden}
+    
+    /* Der Wrapper wird zum Positions-Referenzpunkt für die Caption */
+    .wrapper{
+      position: relative; /* Notwendig für die absolute Positionierung des Kind-Elements */
+      height:100svh;
+      width: 100vw;
+    }
+
+    .hero{
+      width:100%;
+      height:100%; /* Das Bild füllt jetzt den ganzen Wrapper */
+      object-fit:cover;
+      object-position:center;
+    }
+
+    .caption{
+      /* Positioniert die Caption in der Mitte des Wrappers */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Zentriert das Element exakt */
+
+      width: 90%; /* Verhindert, dass der Text bei langen Sätzen unschön umbricht */
+      color:#fff;
+      font-size: clamp(1.8rem, 5vw, 3.5rem); /* Deutlich größer gemacht */
+      font-weight: 600; /* Etwas dicker für bessere Lesbarkeit */
+      text-align:center;
+      line-height:1.3;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5); /* Schatten für bessere Lesbarkeit */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="black.jpeg" alt="SPARK CHANGE" class="hero">
+    <div class="caption">It costs more than a fucking barrel oil and looks like shit.</div>
+  </div>
+</body>
+</html>
