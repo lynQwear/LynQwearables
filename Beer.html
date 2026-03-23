@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>lynQwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%;background:#000;font-family:'Poppins',sans-serif;overflow:hidden}
+    .wrapper{
+      height:100svh;
+      display:flex; align-items:center; justify-content:center;
     }
-    video {
-      max-width: 100%;
-      max-height: 100%;
+    .hero{
+      width:100vw;
+      height:100svh;
+      object-fit:cover;
+      object-position:center;
+      display:block;
     }
   </style>
 </head>
 <body>
-  <video src="cheers.mp4" autoplay muted loop playsinline controls>
-    Dein Browser unterstützt das Video-Tag nicht.
-  </video>
+  <div class="wrapper">
+    <video class="hero" src="cheers.mp4" autoplay muted loop playsinline controls></video>
+  </div>
 </body>
 </html>
